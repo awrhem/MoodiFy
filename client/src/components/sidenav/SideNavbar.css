@@ -1,0 +1,107 @@
+h2 {
+  font-size: 30px;
+  font-weight: normal;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+#navbar {
+  margin: 0 0 10px 0;
+  padding: 0;
+  position: fixed;
+  display: inline-block;
+  height: 100%;
+  overflow: auto;
+  width: 90px;
+  z-index: 1000;
+  transition: width 0.5s ease-in-out;
+}
+
+.navIcons {
+  width:40px;
+  height:40px;
+  scale:1.2;
+  transition: all 0.5s ease-in-out;
+  margin:10px 10px 10px 3px;
+}
+.navIcons:hover{
+  fill:#f86969;
+}
+
+.nav-link-container{
+  margin-top:80px;
+}
+
+.nav-link {
+  padding: 13px;
+  text-decoration: none;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  display:flex;
+  transition: all 0.5s ease-in-out;
+}
+
+.icon-name {
+  margin-top:17px;
+  margin-left:20px;
+}
+
+.hamburger-btn {
+  position: absolute;
+  top:15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  left: 24px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 3px;
+  z-index: 10000;
+}
+.hamburger {
+  position: relative;
+  width: 35px;
+  height: 5px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  background: black;
+}
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  background: black;
+}
+.hamburger.dark::after,
+.hamburger.dark::before {
+  background: white;
+}
+.hamburger::after {
+  transform: translateY(10px);
+}
+.hamburger::before {
+  transform: translateY(-10px);
+}
+.hamburger.dark {
+  background: white;
+}
+.open .hamburger {
+  transform: translate(15px,45px);
+  box-shadow: none;
+  background: transparent;
+}
+.open .hamburger::after {
+  transform: rotate(-45deg) translate(5px, 5px);
+}
+.open .hamburger::before {
+  transform: rotate(45deg) translate(5px, -5px);
+}
