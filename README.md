@@ -1,2 +1,2 @@
-# MoodiFy
+# Strings
 A song suggestion Website
